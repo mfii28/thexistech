@@ -248,3 +248,82 @@ document.addEventListener('DOMContentLoaded', function() {
     updateActiveLink(); // Initial call to set the active link on page load
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const carouselTrack = document.querySelector('.carousel-track');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const founderCards = document.querySelectorAll('.founder-card');
+    const cardWidth = founderCards[0].offsetWidth + 20; // Width + margin
+    let currentIndex = 0;
+    let autoScrollInterval;
+
+    // Clone the first few cards and append them to the end for seamless looping
+    const firstFewCards = Array.from(founderCards).slice(0, 3); // Clone the first 3 cards
+    firstFewCards.forEach(card => {
+        const clone = card.cloneNode(true);
+        carouselTrack.appendChild(clone);
+    });
+
+    // Function to move to the next card
+    function nextCard() {
+        if (currentIndex < founderCards.length - 1) {
+            currentIndex++;
+        } else {
+            // If it's the last card, instantly reset to the first card without animation
+            carouselTrack.style.transition = 'none';
+            carouselTrack.style.transform = `translateX(0)`;
+            // Force a reflow to apply the reset without animation
+            void carouselTrack.offsetWidth;
+            // Restore the transition and move to the first card
+            carouselTrack.style.transition = 'transform 0.5s ease-in-out';
+            currentIndex = 0;
+        }
+        carouselTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+
+    // Function to move to the previous card
+    function prevCard() {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            // If it's the first card, instantly reset to the last card without animation
+            carouselTrack.style.transition = 'none';
+            carouselTrack.style.transform = `translateX(-${(founderCards.length - 1) * cardWidth}px)`;
+            // Force a reflow to apply the reset without animation
+            void carouselTrack.offsetWidth;
+            // Restore the transition and move to the last card
+            carouselTrack.style.transition = 'transform 0.5s ease-in-out';
+            currentIndex = founderCards.length - 1;
+        }
+        carouselTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+
+    // Auto-scroll functionality
+    function startAutoScroll() {
+        autoScrollInterval = setInterval(nextCard, 3000); // Change card every 3 seconds
+    }
+
+    function stopAutoScroll() {
+        clearInterval(autoScrollInterval);
+    }
+
+    // Event listeners for manual navigation
+    nextBtn.addEventListener('click', () => {
+        stopAutoScroll();
+        nextCard();
+        startAutoScroll();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        stopAutoScroll();
+        prevCard();
+        startAutoScroll();
+    });
+
+    // Start auto-scroll on page load
+    startAutoScroll();
+
+    // Pause auto-scroll on hover
+    carouselTrack.addEventListener('mouseenter', stopAutoScroll);
+    carouselTrack.addEventListener('mouseleave', startAutoScroll);
+});
