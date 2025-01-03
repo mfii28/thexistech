@@ -248,82 +248,40 @@ document.addEventListener('DOMContentLoaded', function() {
     updateActiveLink(); // Initial call to set the active link on page load
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const carouselTrack = document.querySelector('.carousel-track');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    const founderCards = document.querySelectorAll('.founder-card');
-    const cardWidth = founderCards[0].offsetWidth + 20; // Width + margin
-    let currentIndex = 0;
-    let autoScrollInterval;
 
-    // Clone the first few cards and append them to the end for seamless looping
-    const firstFewCards = Array.from(founderCards).slice(0, 3); // Clone the first 3 cards
-    firstFewCards.forEach(card => {
-        const clone = card.cloneNode(true);
-        carouselTrack.appendChild(clone);
+document.addEventListener('DOMContentLoaded', function () {
+    // Initialize Swiper for Founders Section
+    const foundersSwiper = new Swiper('.founders-swiper', {
+        slidesPerView: 4, // Display 4 slides per view
+        slidesPerGroup: 1, // Move one slide at a time
+        spaceBetween: 30, // Space between slides
+        loop: true, // Enable infinite loop
+        autoplay: {
+            delay: 3000, // Auto-scroll every 3 seconds
+            disableOnInteraction: false, // Continue autoplay after user interaction
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            // Responsive adjustments
+            320: {
+                slidesPerView: 1, // 1 slide on small mobile devices
+            },
+            640: {
+                slidesPerView: 2, // 2 slides on tablets
+            },
+            1024: {
+                slidesPerView: 3, // 3 slides on small desktops
+            },
+            1200: {
+                slidesPerView: 4, // 4 slides on large desktops
+            },
+        },
     });
-
-    // Function to move to the next card
-    function nextCard() {
-        if (currentIndex < founderCards.length - 1) {
-            currentIndex++;
-        } else {
-            // If it's the last card, instantly reset to the first card without animation
-            carouselTrack.style.transition = 'none';
-            carouselTrack.style.transform = `translateX(0)`;
-            // Force a reflow to apply the reset without animation
-            void carouselTrack.offsetWidth;
-            // Restore the transition and move to the first card
-            carouselTrack.style.transition = 'transform 0.5s ease-in-out';
-            currentIndex = 0;
-        }
-        carouselTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-    }
-
-    // Function to move to the previous card
-    function prevCard() {
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            // If it's the first card, instantly reset to the last card without animation
-            carouselTrack.style.transition = 'none';
-            carouselTrack.style.transform = `translateX(-${(founderCards.length - 1) * cardWidth}px)`;
-            // Force a reflow to apply the reset without animation
-            void carouselTrack.offsetWidth;
-            // Restore the transition and move to the last card
-            carouselTrack.style.transition = 'transform 0.5s ease-in-out';
-            currentIndex = founderCards.length - 1;
-        }
-        carouselTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-    }
-
-    // Auto-scroll functionality
-    function startAutoScroll() {
-        autoScrollInterval = setInterval(nextCard, 3000); // Change card every 3 seconds
-    }
-
-    function stopAutoScroll() {
-        clearInterval(autoScrollInterval);
-    }
-
-    // Event listeners for manual navigation
-    nextBtn.addEventListener('click', () => {
-        stopAutoScroll();
-        nextCard();
-        startAutoScroll();
-    });
-
-    prevBtn.addEventListener('click', () => {
-        stopAutoScroll();
-        prevCard();
-        startAutoScroll();
-    });
-
-    // Start auto-scroll on page load
-    startAutoScroll();
-
-    // Pause auto-scroll on hover
-    carouselTrack.addEventListener('mouseenter', stopAutoScroll);
-    carouselTrack.addEventListener('mouseleave', startAutoScroll);
 });

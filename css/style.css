@@ -1353,41 +1353,48 @@ section {
 }
 
 /* Founders Section */
+/* Founders Section */
 .founders {
     padding: 6rem 0;
     background-color: #ffffff;
 }
 
-.founders-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
+.founders-swiper {
+    width: 100%;
+    padding: 20px;
+    overflow: hidden; /* Prevent overflow issues */
 }
 
 .founder-card {
-    position: relative;
     border-radius: 0.5rem;
     overflow: hidden;
     cursor: pointer;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.founder-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .founder-image {
     position: relative;
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: 1; /* Maintain a square aspect ratio */
+    overflow: hidden;
 }
 
 .founder-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    filter: contrast(200%) brightness(40%) grayscale(100%);
-    transition: filter 0.6s ease;
+    object-fit: cover; /* Ensure images cover the container */
+    transition: transform 0.3s ease;
 }
 
 .founder-card:hover .founder-image img {
-    filter: contrast(100%) brightness(80%) grayscale(0%);
+    transform: scale(1.1); /* Zoom effect on hover */
 }
 
 .founder-info {
@@ -1396,43 +1403,73 @@ section {
     left: 0;
     right: 0;
     padding: 1.5rem;
-    background: linear-gradient(to top, 
-        rgba(108, 99, 255, 0.95),
-        rgba(108, 99, 255, 0.7) 50%,
-        transparent 100%);
-    transform: translateY(0);
-    transition: transform 0.6s ease;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
 }
 
 .founder-info h3 {
-    color: white;
     font-size: 1.2rem;
     margin-bottom: 0.25rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .founder-role {
-    color: rgba(255, 255, 255, 0.9);
     font-size: 0.9rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 0.9);
 }
 
-/* Responsive adjustments */
+/* Swiper Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: rgba(108, 99, 255, 0.8);
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: rgba(108, 99, 255, 1);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 1.2rem;
+}
+
+/* Swiper Pagination */
+.swiper-pagination {
+    position: relative;
+    margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+    background-color: rgba(108, 99, 255, 0.5);
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--primary);
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .founders-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+    .founders-swiper {
+        padding: 10px;
     }
-}
 
-@media (max-width: 480px) {
-    .founders-grid {
-        grid-template-columns: 1fr;
-    }
-    
     .founder-card {
-        max-width: 300px;
+        max-width: 100%; /* Ensure cards take full width on mobile */
         margin: 0 auto;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none; /* Hide navigation buttons on mobile */
     }
 }
 
