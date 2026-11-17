@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Cryptocurrency Tracker",
+    "category": "Web Development",
+    "image": "images/Capture.JPG",
+    "url": "https://cryptlert.vercel.app/coinlist",
+    "description": "Live cryptocurrency market prices, interactive historical charts, and portfolio monitoring platform."
+  },
+  {
+    "title": "ClarityFi Budget App",
+    "category": "Fintech & Web Development",
+    "image": "images/projects/budget.png",
+    "url": "https://clarityfi-ten.vercel.app/",
+    "description": "Smart personal budgeting and expense tracking software designed for financial clarity."
+  },
+  {
+    "title": "Enterprise Cloud Portal",
+    "category": "SaaS Platform",
+    "image": "images/asset1.png",
+    "url": "#contact",
+    "description": "High-performance enterprise dashboard with real-time operational metrics and user management."
+  }
+]

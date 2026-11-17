@@ -1,0 +1,11 @@
+# robots.txt for https://thexistech.com/
+
+User-agent: *
+Allow: /
+Disallow: /data/
+Disallow: /includes/
+Disallow: /contact-handler.php
+
+# Sitemap & LLM discovery
+Sitemap: https://thexistech.com/sitemap.xml
+# LLMs: https://thexistech.com/llms.txt

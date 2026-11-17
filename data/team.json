@@ -1,0 +1,88 @@
+[
+  /*
+  {
+    "name": "Isaac Yanney",
+    "role": "Chief Executive Officer",
+    "img": "iy.jpg",
+    "bio": "Founder & visionary leading Thexis Tech toward continental innovation."
+  },
+  */
+  {
+    "name": "Napaah Samuel",
+    "role": "Chief Technology Officer",
+    "img": "nap.jpg",
+    "bio": "Overseeing technical architecture, software quality, and engineering excellence."
+  },
+  {
+    "name": "Bumas Lord Edem",
+    "role": "Head of Operations",
+    "img": "hof.jpg",
+    "bio": "Directing business execution, project workflows, and strategic alignment."
+  },
+  {
+    "name": "Emmanuel Oteng",
+    "role": "Lead Developer",
+    "img": "eo.jpg",
+    "bio": "Architecting robust web and mobile software platforms."
+  },
+  {
+    "name": "Harrison Kwasi Danso",
+    "role": "Data Analyst",
+    "img": "hkd.jpg",
+    "bio": "Extracting insights from data to power informed business decisions."
+  },
+  {
+    "name": "Alfred Kojo Turkson",
+    "role": "Data Scientist",
+    "img": "akt.jpg",
+    "bio": "Developing predictive models and advanced intelligent systems."
+  },
+  {
+    "name": "Emmanuel Asiedu Tetteh",
+    "role": "Assist. Developer",
+    "img": "eat.jpg",
+    "bio": "Building reliable features and responsive web experiences."
+  },
+  {
+    "name": "Eric Adu Ampomah",
+    "role": "Lead Graphic Designer",
+    "img": "eaa.jpg",
+    "bio": "Crafting visual identities and high-impact digital designs."
+  },
+  {
+    "name": "Jonathan Asante",
+    "role": "Assist. Graphic Designer",
+    "img": "aj.jpg",
+    "bio": "Designing engaging digital collateral and brand assets."
+  },
+  {
+    "name": "Dolapo Araoye",
+    "role": "Software Developer",
+    "img": "da.jpg",
+    "bio": "Full-stack developer focused on seamless user experiences."
+  },
+  {
+    "name": "Emmanuel Fosu",
+    "role": "Software Developer",
+    "img": "ef.jpg",
+    "bio": "Engineering scalable backend systems and responsive frontends."
+  },
+  {
+    "name": "Tornyie Micheal",
+    "role": "Software Developer",
+    "img": "tm.jpg",
+    "bio": "Building intuitive web solutions with modern frameworks."
+  },
+  {
+    "name": "Hawa Mohammed",
+    "role": "Financial Manager",
+    "img": "hm.jpg",
+    "bio": "Managing strategic financial planning and corporate operations."
+  },
+  {
+    "name": "Princess Yanney",
+    "role": "Social Media & Marketing Manager",
+    "img": "py.jpg",
+    "bio": "Driving client engagement, brand growth, and digital outreach."
+  }
+]

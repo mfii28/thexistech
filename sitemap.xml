@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Main Landing Page -->
+  <url>
+    <loc>https://thexistech.com/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <image:image>
+      <image:loc>https://thexistech.com/images/asset2.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://thexistech.com/images/asset4.png</image:loc>
+    </image:image>
+  </url>
+
+</urlset>

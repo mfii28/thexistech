@@ -1,0 +1,32 @@
+# Thexis Tech
+
+> Thexis Tech is a Ghanaian technology and software design firm founded in 2023 by Isaac Yanney, specializing in bespoke software design, development, and maintenance for startups, SMEs, and enterprise clients globally.
+
+## Core Capabilities & Services
+
+- **Web Development**: Custom web applications, e-commerce platforms, CMS solutions, progressive web apps (PWAs), high-performance frontends and backends.
+- **Mobile Development**: Native iOS, native Android, and cross-platform (Flutter & React Native) mobile applications.
+- **UI/UX & Product Design**: User research, wireframing, high-fidelity prototypes, design systems, and brand identity design.
+- **Data Science & Analytics**: Business intelligence dashboards, data cleaning & pipeline architecture, predictive analytics, and automated reporting.
+- **Cloud & DevOps**: Scalable cloud infrastructure, CI/CD automated deployment pipelines, database optimization, and high availability systems.
+- **IT Consulting & Maintenance**: Security auditing, continuous monitoring, tech advisory, and software lifecycle maintenance.
+
+## Leadership & Key Team
+
+<!-- - **Isaac Yanney**: Chief Executive Officer & Founder -->
+- **Napaah Samuel**: Chief Technology Officer
+- **Bumas Lord Edem**: Head of Operations
+- **Emmanuel Oteng**: Lead Developer
+- **Harrison Kwasi Danso**: Data Analyst
+- **Alfred Kojo Turkson**: Data Scientist
+
+## Key Clients & Partners
+
+Recognized by organizations including YMCA, Prof Training Solutions, Lion Media, and Pagezz Wesley Design.
+
+## Contact Information
+
+- **Website**: https://thexistech.com/
+- **Email**: Thexistech@gmail.com
+- **Phone**: +233 26 630 6442
+- **Location**: 123 Innovation Street, Accra, Ghana

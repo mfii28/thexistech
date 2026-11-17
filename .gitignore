@@ -1,0 +1,30 @@
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+
+# Backups & Temp files
+*.bak
+*.tmp
+*.swp
+*~
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE / Editor folders
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Dependency / Build directories (if ever added)
+vendor/
+node_modules/

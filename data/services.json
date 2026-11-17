@@ -1,0 +1,86 @@
+[
+  {
+    "id": "web-development",
+    "title": "Web Development",
+    "icon": "fas fa-code",
+    "desc": "Building responsive, modern, and scalable web solutions tailored for business impact.",
+    "features": [
+      "Custom Website Development",
+      "E-Commerce Solutions",
+      "CMS Development",
+      "Progressive Web Apps (PWAs)"
+    ],
+    "link": "#contact",
+    "delay": 0
+  },
+  {
+    "id": "mobile-development",
+    "title": "Mobile Development",
+    "icon": "fas fa-mobile-alt",
+    "desc": "Creating powerful, native, and cross-platform apps that delight users on iOS & Android.",
+    "features": [
+      "iOS App Development",
+      "Android App Development",
+      "Cross-Platform Apps",
+      "App Maintenance & Upgrades"
+    ],
+    "link": "#contact",
+    "delay": 100
+  },
+  {
+    "id": "ui-ux-design",
+    "title": "UI/UX & Product Design",
+    "icon": "fas fa-paint-brush",
+    "desc": "Designing visually stunning, intuitive user interfaces and unforgettable digital brands.",
+    "features": [
+      "Wireframing & Prototyping",
+      "Modern UI/UX Design",
+      "Brand Identity & Graphics",
+      "Design Systems & Guidelines"
+    ],
+    "link": "#contact",
+    "delay": 200
+  },
+  {
+    "id": "data-analytics",
+    "title": "Data Science & Analytics",
+    "icon": "fas fa-chart-line",
+    "desc": "Transforming complex datasets into actionable insights and strategic business intelligence.",
+    "features": [
+      "Data Cleaning & Modelling",
+      "Predictive Analytics",
+      "Interactive Dashboards",
+      "Business Intelligence Systems"
+    ],
+    "link": "#contact",
+    "delay": 300
+  },
+  {
+    "id": "cloud-infrastructure",
+    "title": "Cloud & DevOps Solutions",
+    "icon": "fas fa-cloud",
+    "desc": "Deploying secure, high-availability cloud infrastructure and automated workflows.",
+    "features": [
+      "Cloud Server Setup & Hosting",
+      "CI/CD Automation Pipelines",
+      "Database Optimization",
+      "Server Security & Backups"
+    ],
+    "link": "#contact",
+    "delay": 400
+  },
+  {
+    "id": "it-consulting",
+    "title": "IT Consulting & Maintenance",
+    "icon": "fas fa-headset",
+    "desc": "Reliable long-term technical support, ongoing security audits, and systems maintenance.",
+    "features": [
+      "24/7 Monitoring & Support",
+      "Security Audits & Patching",
+      "System Upgrades & Optimization",
+      "Technical Architecture Advisory"
+    ],
+    "link": "#contact",
+    "delay": 500
+  }
+]
